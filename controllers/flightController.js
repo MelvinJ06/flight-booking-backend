@@ -1,6 +1,6 @@
 const Flight = require('../models/Flight');
 
-// Get all flights based on search criteria
+
 exports.searchFlights = async (req, res) => {
   try {
     const { departure, arrival, date } = req.query;

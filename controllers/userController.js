@@ -1,9 +1,9 @@
-// backend/controllers/userController.js
+
 
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
-// Register a new user
+
 const registerUser = async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -14,7 +14,7 @@ const registerUser = async (req, res) => {
     }
 };
 
-// Log in an existing user
+
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -29,10 +29,10 @@ const loginUser = async (req, res) => {
     }
 };
 
-// Get user details
+
 const getUserDetails = async (req, res) => {
     try {
-        const user = await User.findById(req.user.id).select('-password'); // Exclude password
+        const user = await User.findById(req.user.id).select('-password'); 
         res.status(200).json(user);
     } catch (error) {
         res.status(500).json({ error: error.message });
