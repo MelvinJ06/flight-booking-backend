@@ -1,6 +1,6 @@
 
 
-const NotificationService = require('../services/notificationService'); // Make sure this service exists
+const NotificationService = require('../services/notificationService'); 
 
 
 const sendNotification = async (req, res) => {
